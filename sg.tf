@@ -28,6 +28,6 @@ resource "aws_security_group" "my_sg" {
 resource "aws_instance" "ec2" {
     ami = "ami-0f3caa1cf4417e51b"
     instance_type = "t3.micro"
-    vpc_security_group_ids = [ aws_security_group.my_sg ]
+    vpc_security_group_ids = [ "aws_security_group.my_sg" ]
   
 }
